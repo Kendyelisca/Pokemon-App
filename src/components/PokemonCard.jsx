@@ -26,29 +26,38 @@ const PokemonCard = ({ pokemonData }) => {
       const pokemonInfo = await getPokemonById(pokemonData.url);
 
       setPokemon(pokemonInfo);
-      if (pokemonInfo.name === 'pikachu') {
+      if (pokemon.types[0].type.name === 'rock') {
         setBackgroundColor('orange');
+      } else if (pokemon.types[0].type.name === 'fighting') {
+        setBackgroundColor('red');
       }
     };
 
     loadPokemon();
   }, []);
 
+  const handleBack = () => {
+    if (pokemon.types[0].type.name === 'rock') {
+      setBackgroundColor('orange');
+    } else if (pokemon.types[0].type.name === 'fighting') {
+      setBackgroundColor('red');
+    }
+  };
+
   return (
     <>
       {pokemon && (
         <article
           onClick={handleClickNavigate}
-          className="hover:cursor-pointer border rounded mt-5 text-center"
-          style={{ backgroundColor }}
+          className="hover:cursor-pointer border rounded-3xl mt-5 text-center flex items-center flex-row-reverse p-4 bg-red-500 gap-16"
+          style={handleBack()}
         >
           <header>
-            <div></div>
-            <div style={{ width: 150 }} className="w-full ml-3 mr-3">
+            <div style={{ width: 200 }} className="w-full ml-3 mr-3">
               <img
                 src={pokemon.sprites.front_default}
                 alt={pokemon.name}
-                className="ml-5 mr-5"
+                className="ml-5 mr-5 w-60"
               />
             </div>
           </header>
@@ -56,15 +65,19 @@ const PokemonCard = ({ pokemonData }) => {
           <section>
             <section>
               <h2 className="text-2xl font-semibold">{pokemon.name}</h2>
-              <p>{pokemon.types[0].type.name}</p>
-              <p>Tipo</p>
+
+              <p>
+                Tipo: <span>{pokemon.types[0].type.name}</span>
+              </p>
             </section>
 
             <section>
               {pokemon.stats.map((stat) => (
                 <section key={stat.stat.name}>
-                  <h3>{stat.stat.name.toUpperCase()}</h3>
-                  <p>{stat.base_stat}</p>
+                  <h3 className="p-1 ">
+                    {stat.stat.name.toUpperCase()}: <span>{stat.base_stat}</span>
+                  </h3>
+                  <p></p>
                 </section>
               ))}
             </section>

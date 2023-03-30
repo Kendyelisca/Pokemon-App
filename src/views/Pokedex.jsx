@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router';
 import { UserContext } from '../contexts/UserContext';
 import PokemonCard from '../components/PokemonCard';
-import { usePagination } from '../hooks/usePagination';
+import { usePagination } from '../hooks/UsePagination';
 import { Form } from 'react-router-dom';
 
 const Pokedex = () => {
