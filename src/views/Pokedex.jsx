@@ -10,7 +10,7 @@ const Pokedex = () => {
   const { pokemons, types, name, type } = useLoaderData();
   const [pokemonName, setPokemonName] = useState(name ?? '');
   const [pokemonType, setPokemonType] = useState(type ?? '');
-  const pokemonsPagination = usePagination(pokemons, 30);
+  const pokemonsPagination = usePagination(pokemons, 60);
 
   const handleNameChange = (e) => {
     setPokemonName(e.target.value);
@@ -42,7 +42,7 @@ const Pokedex = () => {
             onClick={() => pokemonsPagination.changePageTo(page)}
             className={
               pokemonsPagination.currentPage === page
-                ? 'text-red-500 border rounded p-1 hover:bg-red-500 hover:text-white'
+                ? ' border rounded p-1 bg-red-500 text-white'
                 : ''
             }
           >
@@ -87,7 +87,7 @@ const Pokedex = () => {
         </Form>
       </div>
 
-      <section className="flex flex-wrap gap-2 m-5">
+      <section className="allcard">
         {pokemonsPagination.listSlice.length ? (
           pokemonsPagination.listSlice.map((pokemon) => (
             <PokemonCard key={pokemon.url} pokemonData={pokemon} />

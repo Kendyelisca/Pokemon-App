@@ -1,0 +1,40 @@
+body {
+  transition: 0.5s;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  padding: 10%;
+  flex-wrap: wrap;
+}
+.loader {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 20px;
+}
+@keyframes load10 {
+  50% {
+    transform: rotatez(180deg);
+    border-style: dashed;
+    border-color: red maroon indianred orangered;
+  }
+  100% {
+    transform: rotatez(360deg);
+  }
+}
+.loader10::before {
+  content: '';
+  color: white;
+  height: 100px;
+  width: 100px;
+  background: transparent;
+  border-radius: 50%;
+  border: 40px solid red;
+  animation: load10 1s infinite;
+}

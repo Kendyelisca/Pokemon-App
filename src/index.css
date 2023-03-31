@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 .padre {
   height: 100vh;
@@ -72,4 +73,81 @@ padding: 0 30px;
   100% {
     color:rgb(203, 20, 20)
   }
+}
+
+.mages {
+  position: relative;
+  display: flex;
+
+}
+.abs {
+  transition: 0.5;
+  position: absolute;
+  animation-name: turn;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+ 
+}
+.abs2 {
+  z-index: 10;
+
+}
+.text {
+  background-color: #d5d3d34d;
+  border-radius: 40px;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-size: 12px;
+  margin: 5px;
+  max-width: fit-content;
+  text-shadow: 0 0 12px black;
+  border-radius: 13px/50%;
+ font-weight: 600;
+}
+.allcard {
+  display: grid;
+  
+
+}
+.straight {
+  max-width: 550px;
+  max-height: 380px;
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  
+}
+
+@media (min-width: 600px) {
+  .allcard {
+    
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+}
+@media (min-width: 628px) {
+  .allcard {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  
+  }
+  .straight{
+    height: 330px;
+  }
+  
+}
+@media (min-width: 908px) {
+  .allcard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+  }
+  
 }
