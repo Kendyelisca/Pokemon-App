@@ -48,7 +48,14 @@ img2 {
 .poke img{
 padding: 0 30px;
 }
-
+.maze {
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 50px;
+  transform: 2s;
+  background-image: url('./back88.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 
 @keyframes bright {
   0% {

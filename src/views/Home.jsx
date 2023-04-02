@@ -2,11 +2,13 @@ import React, { useContext, useState } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
 import '../index.css';
+
 const Home = () => {
   const [nameValue, setNameValue] = useState('');
   const [nameError, setNameError] = useState(null);
   const { user, saveUser } = useContext(UserContext);
   const navigate = useNavigate();
+
   const handleChange = (e) => {
     const newNameValue = e.target.value;
 
@@ -27,11 +29,13 @@ const Home = () => {
     }
   };
   return (
-    <div className="padre p-8">
-      <div className="img2">
-        <img src="/pokedex.img" alt="Pokedex" />
-      </div>
-      <div className="text-center pt-14">
+    <div className="padre">
+      <header
+        className="maze bg-red-500 h-96 w-full"
+        style={{ backgroundImage: './back1.jpeg' }}
+      ></header>
+
+      <div className="text-center mar">
         <h1 className="text-red-500 text-center text-4xl font-bold">Hello Trainer!!</h1>
         <p>Type your name to start</p>
       </div>
