@@ -32,7 +32,11 @@ const Home = () => {
     <div className="padre">
       <header
         className="maze bg-red-500 h-96 w-full"
-        style={{ backgroundImage: './back1.jpeg' }}
+        style={{
+          backgroundImage: `url(${'./back88.png'})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+        }}
       ></header>
 
       <div className="text-center mar">
