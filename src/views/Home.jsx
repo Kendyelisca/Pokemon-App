@@ -27,38 +27,34 @@ const Home = () => {
     }
   };
   return (
-    <div className="padre">
+    <div className="padre p-8">
       <div className="img2">
         <img src="/pokedex.img" alt="Pokedex" />
       </div>
-      <div className="text-center">
+      <div className="text-center pt-14">
         <h1 className="text-red-500 text-center text-4xl font-bold">Hello Trainer!!</h1>
         <p>Type your name to start</p>
       </div>
       <div className="form">
         <form
-          className="flex flex-row justify-center items-center mt-8 gap-3"
+          className="flex flex-col justify-center items-center mt-8 gap-3"
           onSubmit={handleSubmit}
         >
           <input
             type="text"
-            className="shadow-md border border-black p-3 input1"
+            className="shadow-md border border-black p-3 input1 rounded-3xl"
             value={nameValue}
             onChange={handleChange}
           />
           <button
             type="submit"
-            className="bg-red-400 p-2 rounded hover:text-white hover:scale-90 hover:bg-red-700"
+            className="bg-red-400 p-1 rounded-3xl hover:text-white hover:scale-90 hover:bg-red-700"
           >
-            Start
+            Start the adventure
           </button>
         </form>
         {nameError && <p className="text-red-500 text-center">{nameError}</p>}
         {user && <Navigate to="/pokedex" replace />}
-      </div>
-
-      <div className="img1 max-w-full">
-        <img src={'./poke.img'} alt="" className="imge" />
       </div>
     </div>
   );

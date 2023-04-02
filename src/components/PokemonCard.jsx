@@ -97,7 +97,7 @@ const PokemonCard = ({ pokemonData }) => {
                 alt={pokemon.name}
                 className="ml-5 mr-5 w-60 abs2"
               />
-              <img src={'./pokeback8.png'} className="abs" alt="k" />
+              <img src={'./pokeback8.png'} className="abs" alt="pokemon spinner" />
             </div>
           </header>
 
@@ -114,7 +114,7 @@ const PokemonCard = ({ pokemonData }) => {
               {pokemon.stats.map((stat) => (
                 <section key={stat.stat.name}>
                   <h3 className="text">
-                    {stat.stat.name.toUpperCase()}: <span>{stat.base_stat}</span>
+                    {stat.stat.name}: <span>{stat.base_stat}</span>
                   </h3>
                   <p></p>
                 </section>

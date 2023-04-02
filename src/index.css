@@ -10,7 +10,7 @@
 }
 .padre {
   height: 100vh;
-background-color: rgb(151, 7, 31);
+background-color: rgba(187, 36, 36, 0.485);
 position: relative;
 
 }
@@ -105,15 +105,46 @@ padding: 0 30px;
   border-radius: 13px/50%;
  font-weight: 600;
 }
+.text::first-letter{
+  text-transform: capitalize;
+}
 .allcard {
   display: grid;
-  
-
+  margin-top: 230px;
+width: 100%;
+box-sizing: border-box;
+overflow: hidden;
+padding: 20px;
 }
 .straight {
-  max-width: 550px;
+  
   max-height: 380px;
+  padding: 10px;
+
 }
+
+.close {
+transition: 2s;
+  animation-name: close;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes close {
+  0% {
+    border-width: 3px;
+    border-color: rgb(78, 145, 78);
+  }
+  50% {
+    border-color: rgb(49, 49, 154);
+    border-width: 3px;
+  }
+  100% {
+    border-color: rgb(213, 58, 58);
+    border-width: 3px;
+  }
+}
+
 
 @keyframes turn {
   from {
@@ -125,25 +156,24 @@ padding: 0 30px;
   
 }
 
-@media (min-width: 600px) {
+@media (min-width: 420px) {
   .allcard {
     
     grid-template-columns: repeat(1, 1fr);
   
   }
 }
-@media (min-width: 628px) {
+@media (min-width: 561px) {
   .allcard {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
   
   }
-  .straight{
-    height: 330px;
-  }
   
 }
-@media (min-width: 908px) {
+
+
+@media (min-width: 600px) {
   .allcard {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
