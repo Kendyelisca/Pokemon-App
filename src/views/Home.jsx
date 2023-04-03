@@ -30,14 +30,11 @@ const Home = () => {
   };
   return (
     <div className="padre">
-      <header
-        className="maze bg-red-500 h-96 w-full"
-        style={{
-          backgroundImage: `url(${'./back88.png'})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundSize: 'contain',
-        }}
-      ></header>
+      <header className="maze bg-red-500 h-96 w-full flex gap-56">
+        <img src={'./back88.png'} className="mage1" />
+        <img src={'./back18.png'} className="mage1" />
+        <img src={'./back00.png'} className="mage1" />
+      </header>
 
       <div className="text-center mar">
         <h1 className="text-red-500 text-center text-4xl font-bold">Hello Trainer!!</h1>

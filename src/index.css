@@ -133,7 +133,9 @@ transition: 2s;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-
+.mage1 {
+  width: 360px;
+}
 @keyframes close {
   0% {
     border-width: 3px;
