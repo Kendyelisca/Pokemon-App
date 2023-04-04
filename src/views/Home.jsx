@@ -32,7 +32,7 @@ const Home = () => {
     <div className="padre">
       <header className="maze bg-red-500 h-96 w-full flex gap-56">
         <img src={'./back88.png'} className="mage1" />
-        <img src={'./back18.png'} className="mage1" />
+        <img src={'./back18.png'} className="round mage1" />
         <img src={'./back00.png'} className="mage1" />
       </header>
 

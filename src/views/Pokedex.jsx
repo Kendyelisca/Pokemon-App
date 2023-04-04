@@ -31,9 +31,9 @@ const Pokedex = () => {
   return (
     <div className="w-full">
       <div className="fixed top-0 w-full bg-red-500 z-40 pl-3 pr-7">
-        <p className="fixed mt-2 ml-10">
+        <p className="text-center mt-2 ml-10 -mb-14">
           <span className="text-white-500 font-semibold text-white text-3xl">
-            Welcome {user},{' '}
+            Welcome {user},
           </span>
           here you'll find your favorite pokemon.
         </p>
@@ -58,7 +58,7 @@ const Pokedex = () => {
           <Form className="mb-5">
             <h3 className="text-whites p-5">Filter for search</h3>
             <div className="flex flex-row justify-between">
-              <div className="flex flex-row gap-3">
+              <div className="flex flex-row gap-3 ml-32">
                 <input
                   type="text"
                   name="pokemon_name"
@@ -81,7 +81,7 @@ const Pokedex = () => {
                 </select>
               </div>
               <button
-                className="bg-red-500 text-white p-2 hover:bg-red-400 rounded"
+                className="bg-white text-black p-1 hover:bg-red-400 rounded absolute "
                 type="submit"
               >
                 Search

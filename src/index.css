@@ -126,6 +126,20 @@ padding: 20px;
   padding: 10px;
 
 }
+.round {
+  animation-name: round;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes round {
+  from {
+transform: rotatey(0deg);
+  }
+  to {
+    transform: rotatey(360deg);
+  }
+  
+}
 
 .close {
 transition: 2s;
