@@ -29,13 +29,13 @@ const PokemonDetail = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col justify-center m-5">
       {pokemon && (
         <>
           <h1 className="bright text-4xl font-bold font-serif text-center">
             {pokemon.name}
           </h1>
-          <div className="flex flex-row justify-center">
+          <div className="flex flex-row justify-center items-center">
             <img
               src={pokemon.sprites.front_default}
               alt={pokemon.name}
