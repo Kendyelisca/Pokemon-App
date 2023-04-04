@@ -58,7 +58,7 @@ const Pokedex = () => {
           <Form className="mb-5">
             <h3 className="text-whites p-5">Filter for search</h3>
             <div className="flex flex-row justify-between">
-              <div className="flex flex-row gap-3 ml-20">
+              <div className="flex flex-col gap-3 ml-20">
                 <input
                   type="text"
                   name="pokemon_name"
