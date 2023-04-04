@@ -90,7 +90,7 @@ const PokemonCard = ({ pokemonData }) => {
           className="hover:cursor-pointer border rounded-3xl mt-5 text-center flex items-center flex-row-reverse p-4  gap-8 text-white straight "
           style={{ backgroundColor }}
         >
-          <header>
+          <header className="part1">
             <div className="w-full ml-3 mr-3 mages">
               <img
                 src={pokemon.sprites.front_default}
@@ -101,19 +101,19 @@ const PokemonCard = ({ pokemonData }) => {
             </div>
           </header>
 
-          <section>
+          <section className="part2">
             <section>
               <h2 className="text-2xl font-semibold">{pokemon.name}</h2>
 
-              <p className="text">
+              <p className="text text3 ">
                 Tipo: <span>{pokemon.types[0].type.name}</span>
               </p>
             </section>
 
-            <section>
+            <section className="text2">
               {pokemon.stats.map((stat) => (
                 <section key={stat.stat.name}>
-                  <h3 className="text">
+                  <h3 className="text w-40">
                     {stat.stat.name}: <span>{stat.base_stat}</span>
                   </h3>
                   <p></p>

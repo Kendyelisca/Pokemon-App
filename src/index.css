@@ -91,11 +91,11 @@ padding: 0 30px;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
- 
+ width: fit-content;
 }
 .abs2 {
   z-index: 10;
-
+max-width: 250px;
 }
 .text {
   background-color: #d5d3d34d;
@@ -121,11 +121,19 @@ overflow: hidden;
 padding: 20px;
 }
 .straight {
-  
-  max-height: 380px;
+  width: 430px;
+  max-height: 280px;
   padding: 10px;
 
 }
+
+.part1 {
+  width: 50%;
+}
+.part2 {
+  width: 50%;
+}
+
 .round {
   animation-name: round;
   animation-duration: 4s;
@@ -193,13 +201,32 @@ transition: 2s;
     gap: 10px;
   
   }
+  .straight{
+    width: 350px;
+  }
+.text3 {
+ margin-left: 35px;
+}
+  .text2 {
+
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .allcard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  
+  }
   
 }
 
 
-@media (min-width: 600px) {
+
+@media (min-width: 900px) {
   .allcard {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   
   }
