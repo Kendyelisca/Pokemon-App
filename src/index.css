@@ -136,6 +136,10 @@ transition: 2s;
 .mage1 {
   width: 360px;
 }
+
+.maze {
+  overflow: hidden;
+}
 @keyframes close {
   0% {
     border-width: 3px;
