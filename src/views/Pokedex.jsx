@@ -58,11 +58,11 @@ const Pokedex = () => {
           <Form className="mb-5">
             <h3 className="text-whites p-5">Filter for search</h3>
             <div className="flex flex-row justify-between">
-              <div className="flex flex-row gap-3 ml-32">
+              <div className="flex flex-row gap-3 ml-20">
                 <input
                   type="text"
                   name="pokemon_name"
-                  className="shadow-md border border-blue h-8"
+                  className="shadow-md border border-blue h-6"
                   value={pokemonName}
                   onChange={handleNameChange}
                 />
@@ -72,7 +72,7 @@ const Pokedex = () => {
                   onChange={handleTypeChange}
                   className="border border-red-400 rounded"
                 >
-                  <option value="">--All--</option>
+                  <option value="">-All-</option>
                   {types.map((type) => (
                     <option key={type.url} value={type.name}>
                       {type.name}
