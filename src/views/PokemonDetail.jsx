@@ -29,7 +29,7 @@ const PokemonDetail = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center m-5">
+    <div className="flex flex-col justify-center m-5 w-full h-full">
       {pokemon && (
         <>
           <h1 className="bright text-4xl font-bold font-serif text-center">
