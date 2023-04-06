@@ -114,24 +114,24 @@ max-width: 250px;
 }
 .allcard {
   display: grid;
-  margin-top: 230px;
+  margin-top: 170px;
 width: 100%;
 box-sizing: border-box;
 overflow: hidden;
 padding: 20px;
 }
 .straight {
-  width: 430px;
+  width: 350px;
   max-height: 280px;
   padding: 10px;
 
 }
 
 .part1 {
-  width: 50%;
+  width: 40%;
 }
 .part2 {
-  width: 50%;
+  width: 60%;
 }
 
 .round {

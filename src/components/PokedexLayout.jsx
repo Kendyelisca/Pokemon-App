@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Outlet } from 'react-router';
 import { UserContext } from '../contexts/UserContext';
 import '../index.css';
 const PokedexLayout = () => {
   const { removeUser } = useContext(UserContext);
+
   return (
     <div>
       <button
@@ -12,6 +13,7 @@ const PokedexLayout = () => {
       >
         Log out
       </button>
+
       <Outlet />
     </div>
   );

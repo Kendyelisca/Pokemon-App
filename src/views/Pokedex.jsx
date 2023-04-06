@@ -10,7 +10,7 @@ const Pokedex = () => {
   const { pokemons, types, name, type } = useLoaderData();
   const [pokemonName, setPokemonName] = useState(name ?? '');
   const [pokemonType, setPokemonType] = useState(type ?? '');
-  const pokemonsPagination = usePagination(pokemons, 30);
+  const pokemonsPagination = usePagination(pokemons, 55);
   const [isOn, setIsOn] = useState(false);
   const handleNameChange = (e) => {
     setPokemonName(e.target.value);

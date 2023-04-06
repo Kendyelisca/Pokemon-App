@@ -35,6 +35,6 @@ body {
   width: 100px;
   background: transparent;
   border-radius: 50%;
-  border: 40px solid red;
+  border: 15px solid red;
   animation: load10 2s infinite;
 }
