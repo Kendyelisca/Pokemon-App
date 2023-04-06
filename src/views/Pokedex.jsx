@@ -11,11 +11,22 @@ const Pokedex = () => {
   const [pokemonName, setPokemonName] = useState(name ?? '');
   const [pokemonType, setPokemonType] = useState(type ?? '');
   const pokemonsPagination = usePagination(pokemons, 30);
-
+  const [isOn, setIsOn] = useState(false);
   const handleNameChange = (e) => {
     setPokemonName(e.target.value);
   };
+  const handleAppear = () => {
+    setIsOn(!isOn);
+  };
 
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      event.stopPropagation();
+      // Submit the form when enter key is pressed
+      event.target.form.submit();
+    }
+  };
   const handleTypeChange = (e) => {
     setPokemonType(e.target.value);
   };
@@ -37,8 +48,16 @@ const Pokedex = () => {
           </span>
           here you'll find your favorite pokemon.
         </p>
-
-        <div className="flex flex-row gap-2 m-20">
+        <div>
+          <button
+            className=" fixed border p-1 round rounded-md left-8 bottom-10 bg-red-500 text-white"
+            onClick={handleAppear}
+          >
+            types
+          </button>
+        </div>
+        <div className="flex flex-row gap-2 m-16 pb-10 ">
+          <button>next</button>{' '}
           {pokemonsPagination.pages.map((page) => (
             <button
               key={page}
@@ -52,40 +71,59 @@ const Pokedex = () => {
               {page}
             </button>
           ))}
+          <button>previous</button>
         </div>
 
         <div className="-mt-24">
           <Form className="mb-5">
-            <h3 className="text-whites p-5">Filter for search</h3>
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-col gap-3 ml-20">
-                <input
-                  type="text"
-                  name="pokemon_name"
-                  className="shadow-md border border-blue h-6"
-                  value={pokemonName}
-                  onChange={handleNameChange}
-                />
-                <select
-                  name="pokemon_type"
-                  value={pokemonType}
-                  onChange={handleTypeChange}
-                  className="border border-red-400 rounded"
+            <div className="search">
+              <h3 className="text-white font-semibold pb-7">Filter for search</h3>
+              <div className="flex flex-row justify-between">
+                <div className="flex gap-3 items-end -mt-8">
+                  <input
+                    type="text"
+                    name="pokemon_name"
+                    className="shadow-md border border-blue h-6 lookup"
+                    value={pokemonName}
+                    onChange={handleNameChange}
+                  />{' '}
+                  <button
+                    className=" bg-white text-black pl-1 pr-1 hover:bg-red-400 rounded"
+                    type="submit"
+                  >
+                    Search
+                  </button>
+                </div>
+                <div
+                  className="selectwrapper"
+                  style={{ display: isOn ? 'block' : 'none' }}
                 >
-                  <option value="">-All-</option>
-                  {types.map((type) => (
-                    <option key={type.url} value={type.name}>
-                      {type.name}
-                    </option>
-                  ))}
-                </select>
+                  <button
+                    onClick={handleAppear}
+                    className="absolute text-white font-bold text-xl right-6 top-4 hover:bg-red-500 border border-rose-50 p-2 rounded-md"
+                  >
+                    X
+                  </button>
+                  <select
+                    name="pokemon_type"
+                    value={pokemonType}
+                    onChange={(e) => {
+                      e.preventDefault();
+                      handleTypeChange(e);
+                      e.target.form.submit();
+                    }}
+                    onKeyPress={handleKeyPress}
+                    className="border border-red-400 rounded type-select"
+                  >
+                    <option value="">Types</option>
+                    {types.map((type) => (
+                      <option key={type.url} value={type.name}>
+                        {type.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
-              <button
-                className="bg-white text-black p-1 hover:bg-red-400 rounded absolute "
-                type="submit"
-              >
-                Search
-              </button>
             </div>
           </Form>
         </div>
