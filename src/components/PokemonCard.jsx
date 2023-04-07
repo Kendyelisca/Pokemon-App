@@ -87,15 +87,15 @@ const PokemonCard = ({ pokemonData }) => {
       {pokemon ? (
         <article
           onClick={handleClickNavigate}
-          className="hover:cursor-pointer border rounded-3xl mt-5 text-center flex items-center flex-row-reverse p-4  gap-8 text-white straight "
+          className="hover:cursor-pointer border rounded-3xl mt-5 text-center flex items-center flex-row-reverse p-2 text-white straight "
           style={{ backgroundColor }}
         >
           <header className="part1">
-            <div className="w-full ml-3 mr-3 mages">
+            <div className=" mages">
               <img
                 src={pokemon.sprites.front_default}
                 alt={pokemon.name}
-                className="ml-5 mr-5 w-60 abs2"
+                className=" abs2"
               />
               <img src={'./pokeback8.png'} className="abs" alt="pokemon spinner" />
             </div>
