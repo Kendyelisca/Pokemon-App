@@ -68,7 +68,7 @@ const Pokedex = () => {
               onClick={() => pokemonsPagination.changePageTo(page)}
               className={
                 pokemonsPagination.currentPage === page
-                  ? ' border rounded-full p-1 bg-white hover:bg-white hover:text-red-700'
+                  ? ' border rounded-full p-1 text-center bg-white hover:bg-white hover:text-red-700'
                   : ''
               }
             >
