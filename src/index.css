@@ -36,14 +36,6 @@ img2 {
 .input1 {
   height: 35px;
 }
-.bright {
-  font-size: 2.9rem;
-  transition: 1s;
-  animation-name: bright;
-  animation-duration: 3s;
-  color:brown;
-  animation-iteration-count: infinite;
-}
 
 .poke img{
 padding: 0 30px;
@@ -54,30 +46,6 @@ padding: 0 30px;
   transform: 2s;
 }
 
-@keyframes bright {
-  0% {
-    color: rgb(254, 14, 14);
-  }
-  
-  10% {
-    color:rgb(37, 177, 177)
-  }
-  30%{
-    color:rgb(20, 81, 203)
-  }
-  50% {
-    color: rgb(93, 24, 176);
-  }
-  70% {
-    color:rgb(154, 20, 203)
-  }
-  90% {
-    color: rgb(189, 28, 92);
-  }
-  100% {
-    color:rgb(203, 20, 20)
-  }
-}
 
 .mages {
   position: relative;
@@ -157,20 +125,7 @@ transition: 2s;
 .maze {
   overflow: hidden;
 }
-@keyframes close {
-  0% {
-    border-width: 3px;
-    border-color: rgb(78, 145, 78);
-  }
-  50% {
-    border-color: rgb(49, 49, 154);
-    border-width: 3px;
-  }
-  100% {
-    border-color: rgb(213, 58, 58);
-    border-width: 3px;
-  }
-}
+
 
 
 @keyframes turn {

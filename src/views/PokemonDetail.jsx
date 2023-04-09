@@ -32,14 +32,12 @@ const PokemonDetail = () => {
     <div className="flex flex-col justify-center m-5 w-full h-full">
       {pokemon && (
         <>
-          <h1 className="bright text-4xl font-bold font-serif text-center">
-            {pokemon.name}
-          </h1>
+          <h1 className="font-sans text-4xl font-bold text-center">{pokemon.name}</h1>
           <div className="flex flex-row justify-center items-center">
             <img
               src={pokemon.sprites.front_default}
               alt={pokemon.name}
-              className="w-8/12"
+              className="w-96"
             />
           </div>
         </>
