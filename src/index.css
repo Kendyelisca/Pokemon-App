@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  
 }
 .padre {
   height: 100vh;
@@ -141,6 +142,7 @@ transition: 2s;
 @media (max-width: 420px) {
   .allcard {
   display: block;
+  overflow: hidden;
   }
   }
   
