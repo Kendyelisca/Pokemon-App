@@ -58,7 +58,7 @@ const Pokedex = () => {
             types
           </button>
         </div>
-        <div className="flex flex-row gap-2 m-16 pb-10 ">
+        <div className="flex flex-row justify-center gap-2 m-16 pb-10 ">
           <button onClick={pokemonsPagination.previousPage}>
             <ImPrevious />
           </button>{' '}
