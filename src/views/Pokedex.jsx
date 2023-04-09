@@ -3,8 +3,10 @@ import { useLoaderData } from 'react-router';
 import { UserContext } from '../contexts/UserContext';
 import PokemonCard from '../components/PokemonCard';
 import { usePagination } from '../hooks/UsePagination';
-import { Form } from 'react-router-dom';
+import { ImPrevious } from 'react-icons/im';
+import { ImNext } from 'react-icons/im';
 import '../index.css';
+import { Form } from 'react-router-dom';
 const Pokedex = () => {
   const { user } = useContext(UserContext);
   const { pokemons, types, name, type } = useLoaderData();
@@ -57,7 +59,9 @@ const Pokedex = () => {
           </button>
         </div>
         <div className="flex flex-row gap-2 m-16 pb-10 ">
-          <button>next</button>{' '}
+          <button onClick={pokemonsPagination.previousPage}>
+            <ImPrevious />
+          </button>{' '}
           {pokemonsPagination.pages.map((page) => (
             <button
               key={page}
@@ -71,7 +75,9 @@ const Pokedex = () => {
               {page}
             </button>
           ))}
-          <button>previous</button>
+          <button onClick={pokemonsPagination.nextPage}>
+            <ImNext />
+          </button>
         </div>
 
         <div className="-mt-24">
