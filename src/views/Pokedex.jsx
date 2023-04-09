@@ -12,7 +12,7 @@ const Pokedex = () => {
   const { pokemons, types, name, type } = useLoaderData();
   const [pokemonName, setPokemonName] = useState(name ?? '');
   const [pokemonType, setPokemonType] = useState(type ?? '');
-  const pokemonsPagination = usePagination(pokemons, 55);
+  const pokemonsPagination = usePagination(pokemons, 100);
   const [isOn, setIsOn] = useState(false);
   const handleNameChange = (e) => {
     setPokemonName(e.target.value);
@@ -68,7 +68,7 @@ const Pokedex = () => {
               onClick={() => pokemonsPagination.changePageTo(page)}
               className={
                 pokemonsPagination.currentPage === page
-                  ? ' border rounded p-1 bg-white hover:bg-white hover:text-red-700'
+                  ? ' border rounded-full p-1 bg-white hover:bg-white hover:text-red-700'
                   : ''
               }
             >
