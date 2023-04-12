@@ -116,7 +116,8 @@ const Pokedex = () => {
                     onChange={(e) => {
                       e.preventDefault();
                       handleTypeChange(e);
-                      e.target.form.submit();
+                      e.target.form.requestSubmit();
+                      setIsOn(false);
                     }}
                     onKeyPress={handleKeyPress}
                     className="border border-red-400 rounded type-select"

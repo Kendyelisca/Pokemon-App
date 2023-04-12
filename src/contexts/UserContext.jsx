@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
 
   const removeUser = () => {
     setUser(null);
-    localStorage.removeItem('newUser');
+    localStorage.removeItem('nameUser');
   };
   const value = { user, saveUser, removeUser };
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
